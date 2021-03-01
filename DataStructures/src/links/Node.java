@@ -3,8 +3,8 @@ package links;
 //A Linked List Node
 class Node
 {
- int data;       // integer data
- Node next;      // pointer to the next node
+ protected int data;       // data each object contains
+ protected Node next;      // pointer to the next node connected to previous 
 
  public Node(int data)
  {

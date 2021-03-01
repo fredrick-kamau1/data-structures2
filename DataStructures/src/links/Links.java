@@ -50,7 +50,7 @@ public class Links implements LinkList{
 
   @Override
   public int frontValue() {
-    if(front != null) {
+    if(front != null) {      
       return front.data;
     }else {
       System.exit(1);

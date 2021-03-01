@@ -12,7 +12,7 @@ public class LinksTester {
     
     l1.dequeue();
     
-    System.out.println(l1.frontValue());
+    System.out.println("Current front: " + l1.frontValue());
 
   }
 }
