@@ -27,7 +27,7 @@ public class Queue implements QueueADT {
       System.out.println("Queue is full");
       System.exit(1); // optional
     }
-    System.out.println("Inserting element" + item);
+    System.out.println("Inserting element: " + item);
     rear = (rear + 1) % capacity;
     queue[rear] = item;
     count++;
@@ -40,37 +40,35 @@ public class Queue implements QueueADT {
       System.out.println("Queue is empty");
       System.exit(1); //optional
     }
-    System.out.println("Deleting element " + queue[front]);
+    System.out.println("Deleting element: " + queue[front]);
     front = (front + 1) % capacity;
     count--;
   }
 
   @Override
-  public void frontValue() {
-
+  public int frontValue() {
+    if(isEmpty()) {
+      System.out.println("Queue is empty");
+      System.exit(1);
+    }
+    return queue[front];   
+    
   }
 
   @Override
   public boolean isEmpty() {
-
-    return false;
+    return (size() == 0);
+  }
+    
+  @Override
+  public boolean isFull() {    
+    return (size() == capacity);
   }
 
   @Override
-  public int capacity() {
-
-    return 0;
-  }
-
-  public void show() {
-    for (int i = 0; i < capacity; i++)
-      System.out.print(queue[(front + i) % 5] + " ");
-  }
-
-  @Override
-  public boolean isFull() {
+  public int size() {
     // TODO Auto-generated method stub
-    return false;
+    return count;
   }
 
 }

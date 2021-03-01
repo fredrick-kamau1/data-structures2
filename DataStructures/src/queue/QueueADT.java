@@ -6,15 +6,12 @@ public interface QueueADT {
   
   public void dequeue();
   
-  public void frontValue();
+  public int frontValue();
   
   public boolean isEmpty(); 
   
-  public int capacity();
-  
   public boolean isFull();
   
-  
-  
+  public int size();  
 
 }
