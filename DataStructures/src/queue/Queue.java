@@ -2,7 +2,6 @@ package queue;
 
 public class Queue implements QueueADT {
 
-  // private int size;
   int[] queue; // array to store the elements
   private int capacity; // maximum capacity of the queue
   private int rear; // rear points to the last element of the array

@@ -15,15 +15,12 @@ public class QueueTester {
     q1.dequeue();
     
     System.out.println(q1.frontValue());
-//    
-//    q1.enqueue(45);
-//    q1.enqueue(43);
-//    
-//    q1.enqueue(60);
-//    q1.enqueue(70);
     
+    q1.enqueue(45);
+    q1.enqueue(43);    
+    q1.enqueue(60);
    
     
+    System.out.println(q1.frontValue());   
   }
-
 }
