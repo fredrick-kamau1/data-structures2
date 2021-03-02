@@ -21,6 +21,8 @@ public class QueueTester {
     q1.enqueue(60);
    
     
-    System.out.println(q1.frontValue());   
+    System.out.println(q1.frontValue());  
+    
+    System.out.println(q1.toString());
   }
 }

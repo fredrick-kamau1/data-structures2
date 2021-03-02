@@ -3,6 +3,7 @@ package links;
 public class Links implements LinkList{
   private Node front = null;
   private Node rear = null; 
+  private int size;
   
 
   @Override
@@ -21,6 +22,7 @@ public class Links implements LinkList{
       rear.next = node;
       rear = node; 
     }
+    size++;
   }
     
   //delete at the beginning 
@@ -42,10 +44,11 @@ public class Links implements LinkList{
    if(front == null) {
      rear = null; 
    }
-   
+   size--;   
    //deallocate the memory of the removed node and optionally return the removed item
    int item = temp.data;   
    return item;
+   
   }
 
   @Override
@@ -63,4 +66,4 @@ public class Links implements LinkList{
       return rear == null && front == null; 
   }
 
-}
+  }

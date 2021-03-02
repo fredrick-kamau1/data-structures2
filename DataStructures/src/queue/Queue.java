@@ -66,8 +66,20 @@ public class Queue implements QueueADT {
 
   @Override
   public int size() {
-    // TODO Auto-generated method stub
     return count;
   }
+  
+  public String toString() {
+    String retString = "[";
+    int index = front;
+    for(int i = 0; i < count; i++) {
+      retString += queue[index];
+      index = (index + 1) % queue.length;
+      retString += " ";
+    }
+    retString += "]";
+    return retString; 
+  }
+
 
 }

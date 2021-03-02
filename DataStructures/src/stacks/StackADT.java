@@ -1,4 +1,4 @@
-package telusko;
+package stacks;
 
 public interface StackADT {
   
